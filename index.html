@@ -3,68 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS UI</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <script>
-        function getComputerChoice(){
-            const choice = Math.floor(Math.random()*3+1)
 
-            switch (choice){
-            case 1:
-                return "rock";
-                break;
-            case 2:
-                return "paper";
-                break;
-            case 3:
-                return "scissors"
-                break;
-            }
-        }
+    <div class="text_message">Let's begin</div>
 
-        function playRound(playerSelection, computerSelection){
-            const playerChoice = playerSelection.toLowerCase()
-            
-            if(playerChoice === 'paper' && computerSelection === 'paper')
-            return "Draw"
-           else if(playerChoice === 'scissors' && computerSelection === 'scissors')
-            return "Draw"
-           else if(playerChoice === 'rock' && computerSelection === 'rock')
-            return "Draw"
+    <div class="scoreboard">Scoreboard</div>
+    <div class="scores">
+        <div class="player"> Player Score:
+            <div class="playerScore">0</div>
+        </div>
+        <div class="computer">Computer Score:
+            <div class="computerScore">0</div>
+         </div>
+    </div>
 
-            else if(playerChoice === 'paper' && computerSelection === 'rock')
-            return `You win! ${playerChoice} beats ${computerSelection}`
-            else if(playerChoice === 'rock' && computerSelection === 'scissors')
-            return `You win! ${playerChoice} beats ${computerSelection}`
-            else if(playerChoice === 'scissors' && computerSelection === 'paper')
-            return `You win! ${playerChoice} beats ${computerSelection}`
+    <div class="buttons">
+    <button class="Rock">Rock</button>
+    <button class="Paper">Paper</button>
+    <button class="Scissors">Scissors</button>
+    </div>  
 
-            else if(playerChoice === 'rock' && computerSelection === 'paper')
-            return `You lose! ${computerSelection} beats ${playerChoice}`
-            else if(playerChoice === 'paper' && computerSelection === 'scissors')
-            return `You lose! ${computerSelection} beats ${playerChoice}`
-            else if(playerChoice === 'scissors' && computerSelection === 'rock')
-            return `You lose! ${computerSelection} beats ${playerChoice}`
-            
-            else
-            return "you entered wrong choice"
-        }
 
-       
-        
-        function game(){
-            for(let i = 0; i<5; i++){
-                const playerChoice = prompt("enter your choice")
-                 const computerSelection= getComputerChoice()
-    
-                console.log(`player choice is ${playerChoice} and PC chose ${computerSelection}`)
-                console.log(playRound(playerChoice, computerSelection))
-            }
-        }
-        game()
+   
 
-        
-    </script>
 </body>
 </html>

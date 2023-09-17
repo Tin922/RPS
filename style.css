@@ -1,0 +1,32 @@
+.text_message{
+    text-align: center;
+    font-size: 2rem;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #2a59a5;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 20px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem;
+}
+.scoreboard{
+    text-align: center;
+    margin: 2rem;
+    font-size: 2.5rem;
+}
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    
+}
